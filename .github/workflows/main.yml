@@ -155,6 +155,7 @@ jobs:
   # Run tests
   tests:
     runs-on: luxonis-arm-tests
+    continue-on-error: true
     needs: [build-linux-armhf, build-windows-x86_64, build-macos-x86_64, build-linux-x86_64]
     steps:
       - uses: actions/checkout@v2
